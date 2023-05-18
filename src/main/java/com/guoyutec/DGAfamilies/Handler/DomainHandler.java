@@ -1,11 +1,7 @@
 package com.guoyutec.DGAfamilies.Handler;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
-import org.springframework.util.ResourceUtils;
-
+import java.io.InputStream;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
@@ -13,11 +9,12 @@ import com.alibaba.fastjson2.JSONObject;
 import com.guoyutec.DGAfamilies.Entity.DGAEntity;
 
 public class DomainHandler {
-    public static String checkDomain(String domain) {
+    public String checkDomain(String domain) {
         String responseString = "";
         try {
-            String dgaFilePath = ResourceUtils.getFile("Data/DGAfamilies.json").getPath();
-            String jsonContent = new String(Files.readAllBytes(Paths.get(dgaFilePath)));
+            ClassLoader classLoader = getClass().getClassLoader();
+            InputStream inputStream = classLoader.getResourceAsStream("Data/DGAfamilies.json");
+            String jsonContent = new String(inputStream.readAllBytes());
 
             JSONObject jsonObject = JSON.parseObject(jsonContent);
             JSONArray entities = jsonObject.getJSONArray(("entities"));

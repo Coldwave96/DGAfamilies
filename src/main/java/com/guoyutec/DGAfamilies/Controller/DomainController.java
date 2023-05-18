@@ -10,7 +10,8 @@ import com.guoyutec.DGAfamilies.Handler.DomainHandler;
 public class DomainController {
     @RequestMapping("/regex")
     public String checkDomainRegex(String domain) {
-        String response = DomainHandler.checkDomain(domain);
+        DomainHandler domainHandler = new DomainHandler();
+        String response = domainHandler.checkDomain(domain);
         return response;
     }
 }
