@@ -2,6 +2,18 @@
 
 Web API for detecting DGA domains via Regex rules. All project constructed on Spring Boot.
 
+## Usage
+
+### Requirements
+* JDK 17
+* Maven
+
+### Command
+
+```Bash
+mvn spring-boot:run
+```
+
 ## API Description
 
 ### Request
