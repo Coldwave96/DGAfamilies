@@ -11,12 +11,12 @@ Web API for detecting DGA domains via Regex rules. All project constructed on Sp
 ### Command
 
 ```Bash
-# Runable
+# Build & Run
 mvn spring-boot:run
 
 # Package & Run
 mvn clean package
-java -jar DGAfamilies-0.0.1-SNAPSHOT.jar
+java -jar target/DGAfamilies-0.0.1-SNAPSHOT.jar
 ```
 
 ## API Description
