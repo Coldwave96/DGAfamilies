@@ -114,7 +114,7 @@ Server will return error message depended on certain situations.
 |68|UD4|Y|snbhdfln.com<br>snfrpmnq.org<br>snvspnor.in<br>snmvspru.net<br>snpnwsuy.ru|
 |69|Vidro(TID)|Y|pbeqeggzhk.dyndns.org<br>jxsaumg.com<br>hziddfcv.net|
 |70|Vawtrak|Y|fonizwhgnqp.ru<br>ajabunorsxu.ru<br>rktglonmful.ru|
-||71Virut|Y|uiaiub.com<br>unogau.com<br>vwykzx.com|
+|71|Virut|Y|uiaiub.com<br>unogau.com<br>vwykzx.com|
 |72|VolatileCedar|Y|xploreredotnte.info<br>oreredotntexpl.info<br>tnexploreredot.info|
 |73|WD|Y|wd7bdb20e4d622f6569f3e8503138c859d.win|
 |74|XxHex DGA|Y|xxfddc1b01.at<br>xxfeee0d8.fm<br>xx83603fbb.tk|
