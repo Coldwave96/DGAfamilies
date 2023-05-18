@@ -16,7 +16,7 @@ public class DomainHandler {
     public static String checkDomain(String domain) {
         String responseString = "";
         try {
-            String dgaFilePath = ResourceUtils.getFile("classpath:Data/DGAfamilies.json").getPath();
+            String dgaFilePath = ResourceUtils.getFile("Data/DGAfamilies.json").getPath();
             String jsonContent = new String(Files.readAllBytes(Paths.get(dgaFilePath)));
 
             JSONObject jsonObject = JSON.parseObject(jsonContent);
