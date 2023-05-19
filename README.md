@@ -29,7 +29,7 @@ Submit suspicious domain through `domain` parameter.
 
 ```
 @Get
-http://127.0.0.1:8080/dga/regex?domian=[suspicious_domain]
+http://127.0.0.1:8080/dga/regex?domain=[suspicious_domain]
 ```
 
 #### 2.1.2 Response
@@ -62,7 +62,7 @@ Submit suspicious domain through `domain` parameter.
 
 ```
 @Get
-http://127.0.0.1:8080/dga/query?domian=[suspicious_domain]
+http://127.0.0.1:8080/dga/query?domain=[suspicious_domain]
 ```
 
 ### 2.3 DGArchive Multiple Queries
