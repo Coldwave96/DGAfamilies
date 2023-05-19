@@ -1,14 +1,16 @@
 # DGAfamilies
 
-Web API for detecting DGA domains via Regex rules. All project constructed on Spring Boot.
+Web API for detecting DGA domains. All project constructed on Spring Boot.
 
-## Usage
+## 1 Usage
 
-### Requirements
+### 1.1 Requirements
 * JDK 17
 * Maven
 
-### Command
+Plus: An account from [DGArchive](https://dgarchive.caad.fkie.fraunhofer.de). Then update corresponding `username` and `password` parameters in `DomainHandler.java` file.
+
+### 1.2 Command
 
 ```Bash
 # Build & Run
@@ -19,9 +21,9 @@ mvn clean package
 java -jar target/DGAfamilies-0.0.1-SNAPSHOT.jar
 ```
 
-## API Description
-
-### Request
+## 2 API Description
+### 2.1 Regex
+#### 2.1.1 Request
 
 Submit suspicious domain through `domain` parameter.
 
@@ -30,9 +32,9 @@ Submit suspicious domain through `domain` parameter.
 http://127.0.0.1:8080/dga/regex?domian=[suspicious_domain]
 ```
 
-### Response
+#### 2.1.2 Response
 
-**Matched**
+##### 2.1.2.1 **Matched**
 
 Server will response with a JSON string.
 
@@ -46,15 +48,33 @@ Server will response with a JSON string.
 }
 ```
 
-**Not Matched**
+##### 2.1.2.2 **Not Matched**
 
 Server will return message `Not matched with current regex rules.`
 
-**Error**
+##### 2.1.2.3 **Error**
 
 Server will return error message depended on certain situations.
 
-## DGA Families (TBC)
+### 2.2 DGArchive Single Query
+
+Submit suspicious domain through `domain` parameter.
+
+```
+@Get
+http://127.0.0.1:8080/dga/query?domian=[suspicious_domain]
+```
+
+### 2.3 DGArchive Multiple Queries
+
+The queried domains have to be specified in the body of a `POST` request, separated by comma or newline. Results are limited to **100** domains.
+
+```
+@POST
+http://127.0.0.1:8080/dga/queries
+```
+
+## 3 DGA Families (TBC)
 |**ID**|**Family Name**|**Support**|**Examples**|
 |------|---------------|-----------|------------|
 |-|Alien|N|43e88b1c5efebe50d1648a100e60ca5c.xyz<br>5d7fe91ad025c1d2138016c9ec30ef07.xyz<br>5df5de04153beca428915a77d2deccc7.xyz|
